@@ -1,4 +1,4 @@
-class Chatbox {
+class Chatbox{
     constructor() {
         this.args = {
             openButton: document.querySelector('.chatbox__button'),

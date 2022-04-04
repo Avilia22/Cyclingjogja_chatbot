@@ -15,8 +15,9 @@
                     <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png" alt="image">
                 </div>
                 <div class="chatbox__content--header">
+                    $bot_name = "Cyga";
                     <h4 class="chatbox__heading--header">Chat support</h4>
-                    <p class="chatbox__description--header">Hi. My name is Sam. How can I help you?</p>
+                    <p class="chatbox__description--header"> F"Hy I am {$bot_name}! What can I help you?")</p>
                 </div>
             </div>
             <div class="chatbox__messages">
@@ -33,7 +34,10 @@
     </div>
 </div>
 
-    <script src="./app.js"></script>
+<script>
+    $SCRIPT_ROOT = "{{ 'request.script_root|tojson' }}";
+</script>
+<script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
 
 </body>
 </html>
