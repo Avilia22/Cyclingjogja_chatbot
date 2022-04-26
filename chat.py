@@ -25,7 +25,7 @@ model = NeuralNet(input_size, hidden_size, output_size).to(device)
 model.load_state_dict(model_state)
 model.eval()
 
-bot_name = "Cyga"
+bot_name = "cyga"
 
 def get_response(msg):
     sentence = tokenize(msg)
@@ -43,16 +43,14 @@ def get_response(msg):
     if prob.item() > 0.75:
         for intent in intents['intents']:
             if tag == intent["tag"]:
-                return  (f"{bot_name}: {random.choice(intent['responses'])}")
-
+                return random.choice(intent['responses'])
     
-    return  (f"{bot_name}: I do not understand...")
+    return "I do not understand..."
 
 
 if __name__ == "__main__":
-    print(F"Hy I am {bot_name}! What can I help you? (type 'quit' to exit)")
+    print("Let's chat! (type 'quit' to exit)")
     while True:
-        # sentence = "do you use credit cards?"
         sentence = input("You: ")
         if sentence == "quit":
             break

@@ -11,7 +11,7 @@ def index_get():
 #when chatbot run page
 @app.post("/predict")
 def predict():
-    text = request.get_json().get("massage")
+    text = request.get_json().get("message")
     #todo : check if text is valid
     response = get_response(text)
     message = {"answer": response}
